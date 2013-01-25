@@ -10,4 +10,6 @@ rvm use 1.9.3-p125
 # Your previous /Users/ian/.bash_profile file was backed up as /Users/ian/.bash_profile.macports-saved_2012-11-08_at_09:17:03
 ##
 
-
+if [ -f ~/.bashrc]; then
+    source ~/.bashrc
+fi
