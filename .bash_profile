@@ -4,7 +4,14 @@ export NODE_PATH="/usr/local/lib/node_modules"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 export PATH="/Applications/MAMP/bin/php/php5.4.4/bin":$PATH
-rvm use 1.9.3-p125
+
+function command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+if command_exists rvm ; then
+    rvm use 1.9.3-p125
+fi
 
 ##
 # Your previous /Users/ian/.bash_profile file was backed up as /Users/ian/.bash_profile.macports-saved_2012-11-08_at_09:17:03
