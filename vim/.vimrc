@@ -13,6 +13,7 @@
 :set wildmenu
 :set wildmode=list:longest
 
-:map <Tab> <C-w>w
-
 au BufRead,BufNewFile *.ejs set syntax=html
+
+syntax on
+filetype plugin on
