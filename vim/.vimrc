@@ -3,7 +3,7 @@ set nocompatible
 filetype plugin on
 syntax enable
 set background=dark
-colorscheme=solarized
+colorscheme solarized
 
 au BufRead,BufNewFile *.ejs set filetype=html
 au BufRead,BufNewFile *.scss set filetype=css
@@ -23,7 +23,7 @@ set sidescrolloff=10
 set sidescroll=1
 " Allow motions and backspacing over line-endings
 set backspace=indent,eol,start
-set whichwrap=h,1,b,<,>,~,[,]
+set whichwrap=h,l,b,<,>,~,[,]
 
 " Decorations
 set laststatus=2
@@ -33,11 +33,6 @@ set modeline
 set ruler
 set title
 set number
-if exists("+relativenumber")
-    set relativenumber
-else
-    set number
-endif
 
 if exists("+colorcolumn")
     set colorcolumn=81
