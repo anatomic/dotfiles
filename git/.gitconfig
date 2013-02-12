@@ -18,15 +18,18 @@
     new = green
 [alias]
     s = status
-    st = status
+    st = status -sb
     ci = commit
     co = checkout
     br = branch
     df = diff
     up = push
     down = pull
+    ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red) %d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+    graph = log --graph --pretty=format:'%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 [core]
     editor = vim
     excludesfile = ~/.gitignore_global
+    ignorecase = false
 [push]
     default = current

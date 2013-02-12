@@ -43,3 +43,6 @@ set cursorline
 set nohlsearch
 set ignorecase
 set smartcase
+
+inoremap jj <esc>
+inoremap jk <esc>
