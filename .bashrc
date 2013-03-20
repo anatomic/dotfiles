@@ -12,3 +12,5 @@ PS1="$GREEN\u$NO_COLOUR:\w$YELLOW\$(parse_git_branch)$NO_COLOUR\$ "
 PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source ~/.rvm/scripts/rvm
