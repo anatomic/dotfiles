@@ -9,16 +9,12 @@ function command_exists () {
     type "$1" &> /dev/null ;
 }
 
-#if command_exists rvm ; then
-#    rvm use 1.9.3-p125
-#fi
-
-##
-# Your previous /Users/ian/.bash_profile file was backed up as /Users/ian/.bash_profile.macports-saved_2012-11-08_at_09:17:03
-##
-
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if command_exists rvm ; then
+    rvm use 2.0.0 
+fi
+
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm" # Load RVM into a shell session *as a function*
