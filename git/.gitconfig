@@ -1,42 +1,45 @@
 [user]
-	name = Ian Thomas
-	email = ian@ian-thomas.net
+  name = Ian Thomas
+  email = ian@ian-thomas.net
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    interactive = auto
-    ui = true
-    pager = true
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 [color "status"]
-    added = green
-    changed = blue
-    untracked = red
+  added = green
+  changed = blue
+  untracked = red
 [color "diff"]
-    meta = yellow
-    old = red
-    new = green
+  meta = yellow
+  old = red
+  new = green
 [alias]
-    s = status
-    st = status -sb
-    ds = diff --staged
-    ci = commit
-    co = checkout
-    br = branch
-    df = diff
-    up = push
-    down = pull
-    ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red) %d %C(reset)%s%C(green) [%cn]' --decorate --date=short
-    graph = log --graph --pretty=format:'%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  s = status
+  st = status -sb
+  ds = diff --staged
+  ci = commit
+  co = checkout
+  br = branch
+  df = diff
+  up = push
+  down = pull
+  ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red) %d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+  graph = log --graph --pretty=format:'%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  aa = add --all
+  ap = add --patch
+  ca = commit --amend
 [core]
-    editor = vim
-    excludesfile = ~/.gitignore_global
-    ignorecase = false
+  editor = vim
+  excludesfile = ~/.gitignore_global
+  ignorecase = false
 [push]
-    default = current
+  default = current
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
