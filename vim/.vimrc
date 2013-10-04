@@ -24,9 +24,10 @@ set expandtab
 set shiftround
 set nowrap
 set autoindent
+set cindent
 
-" block indent list items and paragraphs
-let g:html_indent_tags = 'li\|p'
+" block indent list items, anchors and paragraphs
+let g:html_indent_tags = 'li\|p\|a'
 
 " scrolling
 set scrolloff=4
@@ -53,7 +54,8 @@ endif
 set cursorline
 set hlsearch
 set incsearch
-set nohlsearch
+" set nohlsearch " This disables the highlighting, not sure why it was set -
+" perhaps remap would be more appropriate?
 set ignorecase
 set smartcase
 
