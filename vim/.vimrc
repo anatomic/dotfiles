@@ -64,6 +64,8 @@ set splitbelow
 set splitright
 
 nmap <leader>h :nohlsearch<cr>
+nmap <leader>p :set paste<cr>
+nmap <leader>P :set nopaste<cr>
 
 inoremap jj <esc>
 inoremap jk <esc>
