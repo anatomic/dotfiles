@@ -67,5 +67,7 @@ nmap <leader>h :nohlsearch<cr>
 nmap <leader>p :set paste<cr>
 nmap <leader>P :set nopaste<cr>
 
+nmap <leader>e :Explore<cr>
+
 inoremap jj <esc>
 inoremap jk <esc>
