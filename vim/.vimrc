@@ -59,7 +59,18 @@ set incsearch
 set ignorecase
 set smartcase
 
-set statusline="%{fugitive#statusline()}"
+set statusline=%t
+set statusline+=%{fugitive#statusline()}
+set statusline+=[%{strlen(&fenc)?&fenc:'none'},
+set statusline+=%{&ff}]
+set statusline+=%h
+set statusline+=%m
+set statusline+=%r
+set statusline+=%y
+set statusline+=%=
+set statusline+=%c,
+set statusline+=%l/%L
+set statusline+=\ %P
 
 " Nicer split directions
 set splitbelow
