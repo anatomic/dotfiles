@@ -59,6 +59,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+set statusline="%{fugitive#statusline()}"
+
 " Nicer split directions
 set splitbelow
 set splitright
