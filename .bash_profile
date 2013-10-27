@@ -5,6 +5,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 # Finished adapting your PATH environment variable for use with MacPorts.
 export PATH="/Applications/MAMP/bin/php/php5.4.4/bin":$PATH
 export PATH=$HOME/dotfiles/tools/webkit2png/:$PATH
+export PATH="/usr/local/bin":$PATH
 
 function command_exists () {
     type "$1" &> /dev/null ;
