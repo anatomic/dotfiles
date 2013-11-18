@@ -52,6 +52,7 @@ if exists("+colorcolumn")
 endif
 
 set cursorline
+set cursorcolumn
 set hlsearch
 set incsearch
 " set nohlsearch " This disables the highlighting, not sure why it was set -
