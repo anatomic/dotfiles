@@ -12,6 +12,7 @@ ZSH_THEME="pygmalion"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias tma='tmux attach -d -t'
+alias git=hub
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -50,7 +51,8 @@ plugins=(git git-extras zsh-syntax-highlighting coffee web-search ruby rails)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/Applications/MAMP/Library/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/ian/.rvm/gems/ruby-2.0.0-p0/bin:/Users/ian/.rvm/gems/ruby-2.0.0-p0@global/bin:/Users/ian/.rvm/rubies/ruby-2.0.0-p0/bin:/Users/ian/.rvm/bin:/opt/local/bin:/Applications/Postgres.app/Contents/MacOS/bin:/Users/ian/dotfiles/tools/webkit2png/:/Applications/MAMP/bin/php/php5.4.4/bin:/usr/local/rvm/bin:/usr/local/rvm/bin:/Users/ian/.rvm/bin
+export PATH=$PATH:/Applications/MAMP/Library/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Applications/Postgres.app/Contents/MacOS/bin:/Users/ian/dotfiles/tools/webkit2png/:/Applications/MAMP/bin/php/php5.4.4/bin
 #
 export Editor=vim
 
+eval "$(rbenv init - --no-rehash)"
