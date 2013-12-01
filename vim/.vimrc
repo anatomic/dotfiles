@@ -15,6 +15,7 @@ colorscheme solarized
 
 au BufRead,BufNewFile *.ejs set filetype=html
 au BufRead,BufNewFile *.scss set filetype=css
+au BufRead,BufNewFile *.md set filetype=markdown
 
 filetype plugin indent on
 set softtabstop=2

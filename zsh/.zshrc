@@ -51,7 +51,7 @@ plugins=(git git-extras zsh-syntax-highlighting coffee web-search ruby rails)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/Applications/MAMP/Library/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Applications/Postgres.app/Contents/MacOS/bin:/Users/ian/dotfiles/tools/webkit2png/:/Applications/MAMP/bin/php/php5.4.4/bin
+export PATH=/usr/local/bin:$PATH:/Applications/MAMP/Library/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Applications/Postgres.app/Contents/MacOS/bin:/Users/ian/dotfiles/tools/webkit2png/:/Applications/MAMP/bin/php/php5.4.4/bin
 #
 export Editor=vim
 
