@@ -41,7 +41,6 @@ COMPLETION_WAITING_DOTS="true"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 #
-cdpath=($HOME/www $HOME/dotfiles)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -51,7 +50,7 @@ plugins=(git git-extras zsh-syntax-highlighting coffee web-search ruby rails)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/Applications/MAMP/Library/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Applications/Postgres.app/Contents/MacOS/bin:/Users/ian/dotfiles/tools/webkit2png/:/Applications/MAMP/bin/php/php5.4.4/bin
+export PATH=/Applications/MAMP/Library/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:$PATH:/Applications/Postgres.app/Contents/MacOS/bin:/Users/ian/dotfiles/tools/webkit2png/:/Applications/MAMP/bin/php/php5.4.4/bin
 #
 export Editor=vim
 
