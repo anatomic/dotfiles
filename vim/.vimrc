@@ -86,3 +86,6 @@ nmap <leader>e :Explore<cr>
 
 inoremap jj <esc>
 inoremap jk <esc>
+
+" Handlebars and Mustache
+let g:mustache_abbreviations = 1
