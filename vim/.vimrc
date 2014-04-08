@@ -10,7 +10,7 @@ set autowrite
 filetype plugin on
 syntax enable
 set background=dark
-" let g:solarized_termtrans = 1
+let g:solarized_termtrans = 1
 colorscheme solarized
 
 au BufRead,BufNewFile *.ejs set filetype=html
