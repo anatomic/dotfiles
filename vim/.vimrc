@@ -9,18 +9,18 @@ set autowrite
 
 filetype plugin on
 syntax enable
-set background=dark
-let g:solarized_termtrans = 1
-colorscheme solarized
+" set background=dark
+" let g:solarized_termtrans = 1
+" colorscheme solarized
 
 au BufRead,BufNewFile *.ejs set filetype=html
 au BufRead,BufNewFile *.scss set filetype=css
 au BufRead,BufNewFile *.md set filetype=markdown
 
 filetype plugin indent on
-set softtabstop=2
-set shiftwidth=2
-set tabstop=2
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
 set expandtab
 set shiftround
 set nowrap
@@ -49,10 +49,13 @@ set number
 set numberwidth=5
 
 if exists("+colorcolumn")
-    set colorcolumn=81
+    highlight ColorColumn ctermbg=233 guibg=#2c2d27
+    let &colorcolumn=join(range(81,999),',')
 endif
 
-set cursorline
+highlight CursorColumn ctermbg=233 guibg=#2c2d7
+
+" set cursorline
 set cursorcolumn
 set hlsearch
 set incsearch

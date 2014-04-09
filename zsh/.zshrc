@@ -14,6 +14,7 @@ ZSH_THEME="pygmalion"
 alias tma='tmux attach -d -t'
 alias git=hub
 alias be="bundle exec"
+alias so=source
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -32,7 +33,7 @@ alias be="bundle exec"
 
 # Uncomment following line if you want to disable command autocorrection
 #DISABLE_CORRECTION="true"
-setopt nocorrectall
+# setopt nocorrectall
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -52,7 +53,7 @@ plugins=(git git-extras zsh-syntax-highlighting coffee web-search ruby rails)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/ian/dotfiles/tools/webkit2png/
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/ian/dotfiles/tools/webkit2png
 #
 export Editor=vim
 
