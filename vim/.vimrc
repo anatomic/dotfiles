@@ -23,9 +23,18 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set shiftround
-set nowrap
+" set nowrap
 set autoindent
 set cindent
+
+" wrap will add newline characters if we don't turn on linebreak
+set wrap
+set linebreak
+set textwidth=0
+set wrapmargin=0
+let &showbreak="++ "
+" list turns off linebreak so disable by default
+set nolist
 
 " block indent list items, anchors and paragraphs
 let g:html_indent_tags = 'li\|p\|a'
