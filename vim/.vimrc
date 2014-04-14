@@ -39,6 +39,9 @@ set nolist
 " block indent list items, anchors and paragraphs
 let g:html_indent_tags = 'li\|p\|a'
 
+" ctags
+set tags+=tags
+
 " scrolling
 set scrolloff=4
 set sidescrolloff=10
@@ -63,9 +66,10 @@ if exists("+colorcolumn")
 endif
 
 highlight CursorColumn ctermbg=233 guibg=#2c2d7
+highlight CursorLine ctermbg=233 guibg=#2c2d7
 
 " set cursorline
-set cursorcolumn
+" set cursorcolumn
 set hlsearch
 set incsearch
 " set nohlsearch " This disables the highlighting, not sure why it was set -
@@ -98,6 +102,9 @@ nmap <leader>e :Explore<cr>
 
 inoremap jj <esc>
 inoremap jk <esc>
+
+inoremap Q q
+inoremap W w
 
 " Handlebars and Mustache
 let g:mustache_abbreviations = 1
