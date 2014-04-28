@@ -15,7 +15,7 @@ alias tma='tmux attach -d -t'
 alias git=hub
 alias be="bundle exec"
 alias so=source
-alias ssh="TERM=screen ssh"
+# alias ssh="TERM=screen ssh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -54,7 +54,7 @@ plugins=(git git-extras zsh-syntax-highlighting coffee web-search ruby rails)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/ian/dotfiles/tools/webkit2png
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/ian/dotfiles/tools/webkit2png
 
 export Editor=vim
 
