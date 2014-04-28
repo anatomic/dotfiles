@@ -60,6 +60,13 @@ set title
 set number
 set numberwidth=5
 
+if exists(":Tabularize")
+    nmap <leader>a= :Tabularize \=<CR>
+    vmap <leader>a= :Tabularize \=<CR>
+    nmap <leader>a: :Tabularize /:\zs<CR>
+    vmap <leader>a: :Tabularize /:\zs<CR>
+endif
+
 if exists("+colorcolumn")
     highlight ColorColumn ctermbg=233 guibg=#2c2d27
     let &colorcolumn=join(range(81,999),',')
@@ -103,8 +110,9 @@ nmap <leader>e :Explore<cr>
 inoremap jj <esc>
 inoremap jk <esc>
 
-inoremap Q q
-inoremap W w
+command Q q
+command W w
+command WQ wq
 
 " Handlebars and Mustache
 let g:mustache_abbreviations = 1
