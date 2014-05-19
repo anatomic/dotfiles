@@ -12,7 +12,7 @@ ZSH_THEME="pygmalion"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias tma='tmux attach -d -t'
-alias git=hub
+#alias git=hub
 alias be="bundle exec"
 alias so=source
 # alias ssh="TERM=screen ssh"

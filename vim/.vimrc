@@ -13,6 +13,7 @@ syntax enable
 " let g:solarized_termtrans = 1
 " colorscheme solarized
 
+au BufRead,BufNewFile *.phtml set filetype=php.html
 au BufRead,BufNewFile *.ejs set filetype=html
 au BufRead,BufNewFile *.scss set filetype=css
 au BufRead,BufNewFile *.md set filetype=markdown
