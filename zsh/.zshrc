@@ -57,6 +57,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/ian/dotfiles/tools/webkit2png
 
 export Editor=vim
+export TERM=xterm-256color
 
 eval "$(rbenv init - --no-rehash)"
 

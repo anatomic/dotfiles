@@ -9,13 +9,19 @@ set autowrite
 
 filetype plugin on
 syntax enable
-" set background=dark
-" let g:solarized_termtrans = 1
-" colorscheme solarized
+set background=dark
+let g:solarized_termcolors=&t_Co
+let g:solarized_termtrans=1
+let g:solarized_degrade=0
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
+" let g:rehash256 = 1
 
 au BufRead,BufNewFile *.phtml set filetype=php.html
+au BufRead,BufNewFile *.tache set filetype=mustache.html
 au BufRead,BufNewFile *.ejs set filetype=html
-au BufRead,BufNewFile *.scss set filetype=css
+au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.md set filetype=markdown
 
 filetype plugin indent on
@@ -68,13 +74,13 @@ if exists(":Tabularize")
     vmap <leader>a: :Tabularize /:\zs<CR>
 endif
 
-if exists("+colorcolumn")
-    highlight ColorColumn ctermbg=233 guibg=#2c2d27
-    let &colorcolumn=join(range(81,999),',')
-endif
+" if exists("+colorcolumn")
+"     highlight ColorColumn ctermbg=233 guibg=#2c2d27
+"     let &colorcolumn=join(range(81,999),',')
+" endif
 
-highlight CursorColumn ctermbg=233 guibg=#2c2d7
-highlight CursorLine ctermbg=233 guibg=#2c2d7
+" highlight CursorColumn ctermbg=233 guibg=#2c2d7
+" highlight CursorLine ctermbg=233 guibg=#2c2d7
 
 " set cursorline
 " set cursorcolumn
@@ -105,15 +111,14 @@ set splitright
 nmap <leader>h :nohlsearch<cr>
 nmap <leader>p :set paste<cr>
 nmap <leader>P :set nopaste<cr>
-
 nmap <leader>e :Explore<cr>
 
 inoremap jj <esc>
 inoremap jk <esc>
 
-command Q q
-command W w
-command WQ wq
+command! Q q
+command! W w
+command! WQ wq
 
 " Handlebars and Mustache
 let g:mustache_abbreviations = 1
