@@ -21,7 +21,7 @@ colorscheme solarized
 au BufRead,BufNewFile *.phtml set filetype=php.html
 au BufRead,BufNewFile *.tache set filetype=mustache.html
 au BufRead,BufNewFile *.ejs set filetype=html
-au BufRead,BufNewFile *.scss set filetype=scss
+au BufRead,BufNewFile *.scss set filetype=scss.css
 au BufRead,BufNewFile *.md set filetype=markdown
 
 filetype plugin indent on
