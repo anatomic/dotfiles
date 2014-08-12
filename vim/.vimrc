@@ -17,6 +17,7 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
 " let g:rehash256 = 1
+set synmaxcol=2048
 
 au BufRead,BufNewFile *.phtml set filetype=php.html
 au BufRead,BufNewFile *.tache set filetype=mustache.html
@@ -34,6 +35,8 @@ set shiftround
 " set nowrap
 set autoindent
 set cindent
+
+set vb
 
 " wrap will add newline characters if we don't turn on linebreak
 set wrap
@@ -69,22 +72,12 @@ set number
 set numberwidth=5
 
 if exists(":Tabularize")
-    nmap <leader>a= :Tabularize \=<CR>
-    vmap <leader>a= :Tabularize \=<CR>
-    nmap <leader>a: :Tabularize /:\zs<CR>
-    vmap <leader>a: :Tabularize /:\zs<CR>
+    nmap <leader>= :Tabularize /=<CR>
+    vmap <leader>= :Tabularize /=<CR>
+    nmap <leader>: :Tabularize /:\zs<CR>
+    vmap <leader>: :Tabularize /:\zs<CR>
 endif
 
-" if exists("+colorcolumn")
-"     highlight ColorColumn ctermbg=233 guibg=#2c2d27
-"     let &colorcolumn=join(range(81,999),',')
-" endif
-
-" highlight CursorColumn ctermbg=233 guibg=#2c2d7
-" highlight CursorLine ctermbg=233 guibg=#2c2d7
-
-" set cursorline
-" set cursorcolumn
 set hlsearch
 set incsearch
 " set nohlsearch " This disables the highlighting, not sure why it was set -
@@ -120,6 +113,10 @@ inoremap jk <esc>
 command! Q q
 command! W w
 command! WQ wq
+
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Handlebars and Mustache
 let g:mustache_abbreviations = 1
