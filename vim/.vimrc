@@ -10,13 +10,10 @@ set autowrite
 filetype plugin on
 syntax enable
 set background=dark
-let g:solarized_termcolors=&t_Co
+" let g:solarized_termcolors=256
 let g:solarized_termtrans=1
-let g:solarized_degrade=0
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
 colorscheme solarized
-" let g:rehash256 = 1
+call togglebg#map("<F5>") "switch between light and dark
 set synmaxcol=2048
 
 au BufRead,BufNewFile *.phtml set filetype=php.html
@@ -74,8 +71,8 @@ set numberwidth=5
 if exists(":Tabularize")
     nmap <leader>= :Tabularize /=<CR>
     vmap <leader>= :Tabularize /=<CR>
-    nmap <leader>: :Tabularize /:\zs<CR>
-    vmap <leader>: :Tabularize /:\zs<CR>
+    nmap <leader>+ :Tabularize /:\zs<CR>
+    vmap <leader>+ :Tabularize /:\zs<CR>
 endif
 
 set hlsearch
@@ -103,12 +100,16 @@ set splitbelow
 set splitright
 
 nmap <leader>h :nohlsearch<cr>
-nmap <leader>p :set paste<cr>
-nmap <leader>P :set nopaste<cr>
+" nmap <leader>p :set paste<cr>
+" nmap <leader>P :set nopaste<cr>
 nmap <leader>e :Explore<cr>
 
 inoremap jj <esc>
 inoremap jk <esc>
+
+noremap <leader>y "*y
+noremap <leader>yy "*y
+noremap <leader>p :set paste<cr>:put *<cr>:set nopaste<cr>
 
 command! Q q
 command! W w

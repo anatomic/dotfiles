@@ -56,9 +56,19 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/ian/dotfiles/tools/webkit2png
 
-export Editor=vim
+export EDITOR=vim
 export TERM=xterm-256color
 
 eval "$(rbenv init - --no-rehash)"
 
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
+bindkey -v
+
+#vi style incremental search
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-seacrch-forward
+bindkey '^P' history-search-backward
+bindkey '^N' history-seacrch-forward
+
+setopt AUTO_CD #no need to type cd
