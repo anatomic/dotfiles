@@ -59,7 +59,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/
 export EDITOR=vim
 export TERM=xterm-256color
 
-eval "$(rbenv init - --no-rehash)"
+#eval "$(rbenv init - --no-rehash)"
 
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
