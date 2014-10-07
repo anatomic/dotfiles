@@ -67,8 +67,8 @@ bindkey -v
 
 #vi style incremental search
 bindkey '^R' history-incremental-search-backward
-bindkey '^S' history-incremental-seacrch-forward
+bindkey '^S' history-incremental-search-forward
 bindkey '^P' history-search-backward
-bindkey '^N' history-seacrch-forward
+bindkey '^N' history-search-forward
 
 setopt AUTO_CD #no need to type cd
