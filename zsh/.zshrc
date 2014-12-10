@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="pygmalion"
+ZSH_THEME="blinks"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -59,7 +59,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/
 export EDITOR=vim
 export TERM=xterm-256color
 
-eval "$(rbenv init - --no-rehash)"
+#eval "$(rbenv init - --no-rehash)"
 
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
@@ -72,3 +72,6 @@ bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 
 setopt AUTO_CD #no need to type cd
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
