@@ -58,10 +58,12 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/
 
 export EDITOR=vim
 export TERM=xterm-256color
+export SELENIUM_SERVER_JAR=~/dev/selenium/selenium-server-standalone-2.44.0.jar
+export SELENIUM_BROWSER=chrome,firefox
 
 #eval "$(rbenv init - --no-rehash)"
 
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 bindkey -v
 
