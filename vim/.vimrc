@@ -1,3 +1,5 @@
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 execute pathogen#infect()
 set nocompatible
 
@@ -141,7 +143,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 map <leader>t <plug>NERDTreeTabsToggle<CR>
-let g:nerdtree_tabs_autofind=1
+"let g:nerdtree_tabs_autofind=1
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 let g:NERDTreeDirArrows = 1
