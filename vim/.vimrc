@@ -6,14 +6,17 @@ set nowritebackup
 set noswapfile
 set history=50
 set autowrite
+set wildmenu
+set wildmode=list:longest
+set encoding=utf-8
 
 filetype plugin on
+filetype plugin indent on
 syntax enable
 set background=dark
-" let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
 colorscheme solarized
-call togglebg#map("<F5>") "switch between light and dark
 set synmaxcol=2048
 
 au BufRead,BufNewFile *.phtml set filetype=php.html
@@ -22,6 +25,9 @@ au BufRead,BufNewFile *.ejs set filetype=html
 " au BufRead,BufNewFile *.scss set filetype=scss.css
 au BufRead,BufNewFile *.scss setlocal formatoptions-=t formatoptions+=croql
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.jsx set filetype=javascript
+
+let g:jsx_ext_required=0
 
 filetype plugin indent on
 set softtabstop=4
@@ -31,6 +37,7 @@ set expandtab
 set shiftround
 " set nowrap
 set autoindent
+set smartindent
 set cindent
 
 set vb
@@ -68,12 +75,10 @@ set title
 set number
 set numberwidth=5
 
-if exists(":Tabularize")
-    nmap <leader>= :Tabularize /=<CR>
-    vmap <leader>= :Tabularize /=<CR>
-    nmap <leader>+ :Tabularize /:\zs<CR>
-    vmap <leader>+ :Tabularize /:\zs<CR>
-endif
+nmap <leader>= :Tabularize /=<CR>
+vmap <leader>= :Tabularize /=<CR>
+nmap <leader>: :Tabularize /:<CR>
+vmap <leader>: :Tabularize /:<CR>
 
 set hlsearch
 set incsearch
@@ -81,6 +86,8 @@ set incsearch
 " perhaps remap would be more appropriate?
 set ignorecase
 set smartcase
+
+highlight ExtraWhiteSpace ctermbg=red guibg=red
 
 set statusline=%t
 set statusline+=%{fugitive#statusline()}
@@ -91,6 +98,9 @@ set statusline+=%m
 set statusline+=%r
 set statusline+=%y
 set statusline+=%=
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 set statusline+=%c,
 set statusline+=%l/%L
 set statusline+=\ %P
@@ -121,3 +131,15 @@ autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Handlebars and Mustache
 let g:mustache_abbreviations = 1
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
+map <leader>t <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_open_on_console_startup = 1
+
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeWinSize = 40
