@@ -58,7 +58,7 @@ let g:html_indent_tags = 'li\|p\|a'
 set tags+=tags
 
 " scrolling
-set scrolloff=4
+set scrolloff=10
 set sidescrolloff=10
 set sidescroll=1
 " Allow motions and backspacing over line-endings
@@ -87,7 +87,9 @@ set incsearch
 set ignorecase
 set smartcase
 
-highlight ExtraWhiteSpace ctermbg=red guibg=red
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
+highlight ExtraWhitespace ctermbg=red guibg=red
 
 set statusline=%t
 set statusline+=%{fugitive#statusline()}
@@ -139,6 +141,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 map <leader>t <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_autofind=1
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 let g:NERDTreeDirArrows = 1
