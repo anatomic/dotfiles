@@ -146,3 +146,6 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeWinSize = 40
+
+" vim-javascript
+let g:javascript_enable_domhtmlcss = 1
