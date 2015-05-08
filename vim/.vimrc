@@ -151,3 +151,6 @@ let g:NERDTreeWinSize = 40
 
 " vim-javascript
 let g:javascript_enable_domhtmlcss = 1
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
