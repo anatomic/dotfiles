@@ -77,11 +77,6 @@ set title
 set number
 set numberwidth=5
 
-nmap <leader>= :Tabularize /=<CR>
-vmap <leader>= :Tabularize /=<CR>
-nmap <leader>: :Tabularize /:<CR>
-vmap <leader>: :Tabularize /:<CR>
-
 set hlsearch
 set incsearch
 " set nohlsearch " This disables the highlighting, not sure why it was set -
@@ -130,7 +125,7 @@ command! W w
 command! WQ wq
 
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType css  setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Handlebars and Mustache
@@ -154,3 +149,7 @@ let g:javascript_enable_domhtmlcss = 1
 
 " vim-markdown
 let g:vim_markdown_folding_disabled = 1
+
+" vim-easy-align
+vmap <Enter> <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
