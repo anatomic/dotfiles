@@ -1,6 +1,6 @@
 [user]
   name = Ian Thomas
-  email = Ian.Thomas@bskyb.com
+  email = ian@ian-thomas.net
 [color]
   diff = auto
   status = auto
@@ -13,9 +13,10 @@
   changed = blue
   untracked = red
 [color "diff"]
-  meta = yellow
+  meta = yellow bold
   old = red
   new = green
+    frag = magenta bold
 [alias]
   s = status
   st = status -sb
@@ -26,23 +27,18 @@
   df = diff
   up = push
   down = pull
-  ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red) %d %C(reset)%s%C(green) [%cn]' --decorate --date=short 
+  ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red) %d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+    lg = log --graph --date=local --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
   graph = log --graph --pretty=format:'%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
   aa = add --all
   ap = add --patch
   ca = commit --amend
-	ctags = !.git/hooks/ctags
+  ctags = !.git/hooks/ctags
 [core]
   editor = vim
   excludesfile = ~/.gitignore_global
   ignorecase = false
 [push]
   default = current
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
 [init]
 	templatedir = ~/dotfiles/git/.git_template
