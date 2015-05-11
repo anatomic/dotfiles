@@ -57,7 +57,7 @@ set nolist
 let g:html_indent_tags = 'li\|p\|a'
 
 " ctags
-set tags+=tags
+" set tags+=tags
 
 " scrolling
 set scrolloff=10
@@ -109,8 +109,6 @@ set splitbelow
 set splitright
 
 nmap <leader>h :nohlsearch<cr>
-" nmap <leader>p :set paste<cr>
-" nmap <leader>P :set nopaste<cr>
 nmap <leader>e :Explore<cr>
 
 inoremap jj <esc>
@@ -128,13 +126,20 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css  setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
+" tern
+" autocmd FileType javascript setlocal omnifunc=syntaxcomplete#Complete
+set omnifunc=tern#Complete
+let g:tern_show_argument_hints="on hold"
+let g:tern_map_keys=1
+
 " Handlebars and Mustache
 let g:mustache_abbreviations = 1
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" syntastic 
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 map <leader>t <plug>NERDTreeTabsToggle<CR>
