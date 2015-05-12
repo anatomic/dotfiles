@@ -17,14 +17,12 @@ filetype plugin indent on
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-" let g:solarized_termtrans=1
 colorscheme solarized
 set synmaxcol=2048
 
 au BufRead,BufNewFile *.phtml set filetype=php.html
 au BufRead,BufNewFile *.tache set filetype=mustache.html
 au BufRead,BufNewFile *.ejs set filetype=html
-" au BufRead,BufNewFile *.scss set filetype=scss.css
 au BufRead,BufNewFile *.scss setlocal formatoptions-=t formatoptions+=croql
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.jsx set filetype=javascript
@@ -135,7 +133,11 @@ let g:tern_map_keys=1
 " Handlebars and Mustache
 let g:mustache_abbreviations = 1
 
-" syntastic 
+" snipmate
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
+
+" syntastic
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
