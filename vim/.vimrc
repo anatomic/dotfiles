@@ -3,6 +3,8 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 set nocompatible
 
+set clipboard=unnamed
+
 set nobackup
 set nowritebackup
 set noswapfile
@@ -16,7 +18,8 @@ filetype plugin on
 filetype plugin indent on
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+" let g:solarized_termcolors=256
 colorscheme solarized
 set synmaxcol=2048
 
@@ -160,3 +163,6 @@ let g:vim_markdown_folding_disabled = 1
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" json prettify
+nmap <leader>j :%!python -m json.tool<CR>

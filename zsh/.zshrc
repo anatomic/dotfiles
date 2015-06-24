@@ -5,12 +5,13 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="blinks"
+ZSH_THEME="robbyrussell"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias tmux='TERM=screen-256color-bce tmux'
 alias tma='tmux attach -d -t'
 #alias git=hub
 alias be="bundle exec"
@@ -49,7 +50,7 @@ cdpath=($HOME/www $HOME/dotfiles)
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-extras zsh-syntax-highlighting coffee web-search ruby rails)
+plugins=(git git-extras npm osx sudo tmux vagrant brew zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,7 +58,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/texbin:/Users/ian/dotfiles/tools/webkit2png
 
 export EDITOR=vim
-export TERM=xterm-256color
 export SELENIUM_SERVER_JAR=~/dev/selenium/selenium-server-standalone-2.44.0.jar
 export SELENIUM_BROWSER=chrome,firefox
 
